@@ -98,7 +98,7 @@ Nel caso tu abbia salvato il file in JSON in una cartella diversa da quella dett
 `mock-json-servers` oltre che ad avviarci un server ci aiuta a rendere disponibile il nostro file come API così che possiamo accederci dall'esterno.
 Proviamoci!!
 
-Andiamo sul browser per accedere alla nostra API che di default se non indichi si avvierà su:
+Andiamo sul browser per accedere alla nostra API che di default si avvierà su:
  `http://localhost:8000`
 e andiamo cercare la nostra risorsa:
 `http://localhost:8000/lingue`
@@ -136,7 +136,7 @@ E andiamo a recuperarli su
 
 ## Per le piú temerarie
 
-Possiamo riprenderemo il CV di paperina fatto durante l'incontro su Bulma e invece di scrivere, per esempio, le lingue che sa parlare Paperina direttamente nell'HTML, le andremo a recuperare dal nostro server.
+Possiamo riprenderemo il CV di Paperina fatto durante l'incontro su [Bulma](https://github.com/girlscodeit/bulmalicious-web-pages)(https://github.com/girlscodeit/bulmalicious-web-pages)  e invece di scrivere, per esempio, le lingue che sa parlare Paperina direttamente nell'HTML, le andremo a recuperare dal nostro server.
 Insomma, andremo a sostituire queste voci qua:
 
 ```
@@ -184,7 +184,9 @@ $(document).ready(function(){
 });
 </script>
 ```
-Poi dobbiamo scrivere le chiamate che ci servono quindi nell'url inseriamo dove (localhost:25000) e cosa (lingue) andare a prendere la risorsa che effettua il lavoro.
+Nella funzione dobbiamo inserire l'url dove é risiede la nostra risorsa inseriamo quindi `http://localhost:8000/lingue`.
+
+Nella parte di codice qua sopra, nei commenti, sono spiegati meglio i passaggi delle varie operazioni che verranno svolte, i commenti sono indicati da `//`, i doppi slash.
 
 Infine per renderizzare il nostro contenuto dobbiamo iniettare nell'HTML i nostri dati presi dal server:
 ```
@@ -201,7 +203,7 @@ Infine per renderizzare il nostro contenuto dobbiamo iniettare nell'HTML i nostr
       editor che useremo per scrivere il nostro codice
         - HTML
           HyperText Markup Language è il linguaggio utilizzato per creare pagine web e altri tipi di documenti visualizzabili in un browser.
-        - JavaScript è il linguaggio utilizzato per creare pagine web piú
+        - JavaScript è il linguaggio piú utilizzato per creare pagine web
 
     - Node
       è il motore per JavaScript
@@ -216,9 +218,9 @@ Infine per renderizzare il nostro contenuto dobbiamo iniettare nell'HTML i nostr
       |  
       - jQuery è libreria Javascript molto utilizzata per applicazioni web
         |
-        - AJAX, ti permette di fare le chiamate HTTP
+        - AJAX, altra libreria che ti permette di fare le chiamate HTTP
 
     - Terminale o prompt
       vi permette di avere in una finestra il computer senza interfaccia grafica, ovvero di interagire direttamente con esso attraverso i comandi. Ecco una breve guida introduttiva (https://tutorial.djangogirls.org/it/intro_to_command_line/)
     |
-    - Per riuscire ad avvviare il nostro server
+    - il terminale ci serve per riuscire ad avvviare il nostro server
