@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IL CV DI PAPERINA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $.ajax({url: "http://localhost:8000/lingue", success: function(result){
+      var testo = result.lingue[0].nome
+      $("#italiano").html(testo)
+    }});
+  });
+  </script>
+  <script>
+  $(document).ready(function(){
+    $.ajax({url: "http://localhost:8000/lingue", success: function(result){
+      var testo = result.lingue[1].nome
+      $("#inglese").html(testo)
+    }});
+  });
+  </script>
+  <script>
+  $(document).ready(function(){
+    $.ajax({url: "http://localhost:8000/hobbies", success: function(result){
+      var testo = JSON.stringify(result)
+        $("#hobbies").html(testo)
+    }});
+  });
+  </script>
+  <style type="text/css">
+  .hero.is-light {
+    background-color:lightpink;
+  }
+  </style>
+</head>
+
+<body>
+  <section class="hero is-light is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <div class="content">
+          <h1 class="title has-text-weight-bold"> Paperina </h1>
+        </div>
+        <br><br>
+        <div class="columns">
+          <div class="column is-one-fifth">
+            <div class="content">
+              <figure class="image is-3by4">
+                <img src="Paperina.png">
+              </figure>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column">
+              <div class="content">
+                <h4><b>Nome:</b></h4>
+                <h4><b>Telefono:</b></h4>
+                <h4><b>Email:</b></h4>
+                <h4><b>Nazionalità:</b></h4>
+              </div>
+            </div>
+            <div class="column">
+              <div class="content">
+                <h4>Paperina</h4>
+                <h4>+39 333 3333333</h4>
+                <h4>paperina@waltdisney.com</h4>
+                <h4>Americana</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h2>Formazione</h2>
+        <h4>Laureata all'Università di Cartoni animati presso Walt Disney</h4>
+        <p>Principali materie:</p>
+        <ul>
+          <li>Divertimento</li>
+          <li>Barzellette</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h2>Esperienza lavorativa</h2>
+        <h4>Ballerina presso Palco dell'Ariston</h4>
+        <p> Attività:</p>
+        <ul>
+          <li>Danza classica</li>
+          <li>Danza Hip-Hop</li>
+        </ul>
+        <br>
+        <h4>Acrobata presso Cirque du Soleil</h4>
+        <p> Attività:</p>
+        <ul>
+          <li>Tessuti aerei</li>
+          <li>Trapezio</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h2>Capacità e competenze personali</h2>
+        <ul>
+          <li>Capacità di comunicazione</li>
+          <li>Spirito di gruppo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h2>Competenze Linguistiche</h2>
+        <ul>
+          <li><h4>Inglese</h4></li>
+          <p>Ottimo</p>
+          <br>
+          <li><h4>Spagnolo</h4></li>
+          <p>Buono</p>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h1>Dati presi dal nostro server</h1>
+        <h2>Competenze Linguistiche</h2>
+        <ul>
+          <li><h4 id="italiano"></h4></li>
+          <li><h4 id="inglese"></h4></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h1>Dati presi dal nostro server</h1>
+        <h2>Dati grezzi</h2>
+        <p id="hobbies"></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

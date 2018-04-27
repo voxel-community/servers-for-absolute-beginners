@@ -1,0 +1,36 @@
+{
+  "/lingue": {
+    "get": {
+      "lingue": [
+        {
+          "nome": "Italiano",
+          "livello": "Ottimo"
+        },
+        {
+          "nome": "Inglese",
+          "livello": "Discreto"
+        }
+      ]
+    },
+    "post": {
+      "lingue": [
+        {
+          "nome": "Russo",
+          "livello": "Principiante"
+        }
+      ]
+    }
+  },
+  "/hobbies": {
+    "get": {
+      "hobbies": [
+        {
+          "tipo": "Guardare Netflix"
+        },
+        {
+          "tipo": "Ascoltare musica"
+        }
+      ]
+    }
+  }
+}
