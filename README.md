@@ -184,7 +184,7 @@ $(document).ready(function(){
 });
 </script>
 ```
-Nella funzione dobbiamo inserire l'url dove é risiede la nostra risorsa inseriamo quindi `http://localhost:8000/lingue`.
+Nella funzione dobbiamo inserire l'url dove risiede la nostra risorsa inseriamo quindi `http://localhost:8000/lingue`.
 
 Nella parte di codice qua sopra, nei commenti, sono spiegati meglio i passaggi delle varie operazioni che verranno svolte, i commenti sono indicati da `//`, i doppi slash.
 
